@@ -57,7 +57,7 @@ But if I have to explain it to another developer(technically), I would say:
 
 **Q: How have you documented the code?**
 
-**A:** I documented the API using three ways:
+**A:** I documented the API using four ways:
 - Docstrings. I used docstrings to document the functions, classes, and modules.
 - Swagger. I used drf-yasg to generate swagger documentation for the API.
 - Redoc. I used redoc to render the swagger documentation in a more user-friendly way.
