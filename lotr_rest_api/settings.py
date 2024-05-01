@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["0.0.0.0"]
 
+APPEND_SLASH = False
 
 # Application definition
 
@@ -152,3 +153,4 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Lord of The Rings RESTful API for adding/viewing your favorite character.',
     'VERSION': '1.0.0',
 }
+

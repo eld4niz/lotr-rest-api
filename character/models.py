@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class Character(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)    
-    _id = models.CharField(max_length=100, unique=True)
+    _id = models.CharField(max_length=100)
     name = models.CharField(max_length=100)
     wikiUrl = models.CharField(max_length=100, null=True)
     race = models.CharField(max_length=100, null=True)

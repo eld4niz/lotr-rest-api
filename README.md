@@ -18,7 +18,7 @@
 - Utilized PostgreSQL as the database for more efficient data storage.
 - Created URLs based on RESTful URL conventions.
 - Swagger Documentation(configured with drf-spectacular).
-- Postman Collection.
+- Postman Collection(you can find it in the `external/` folder).
 - API Flowchart(made with draw.io).
 
 ## Notes
@@ -44,9 +44,9 @@ Please keep in mind that this application is not production-ready. This project 
 - TokenRefresh - POST - `/api/v1/login/refresh/`
 
 ### Character Endpoints
-- GetCharacter - This endpoint used for getting a character details by id from One API - GET - `/api/v1/character/{id}`
-- ListCharacters - This endpoint is for listing authenticated user's favorite characters - GET - `/api/v1/favorite-list`
-- AddFavoriteCharacter - This endpoint is for adding a character to authenticated user's favorite characters - POST - `/api/v1/character`
+- GetCharacter - This endpoint used for getting a character details by id from One API - GET - `/api/v1/character/{id}/`
+- ListCharacters - This endpoint is for listing authenticated user's favorite characters - GET - `/api/v1/list/`
+- AddFavoriteCharacter - This endpoint is for adding a character to authenticated user's favorite characters - POST - `/api/v1/character/`
 
 ## How to run the project?
 
@@ -61,6 +61,7 @@ There are two ways to run the project:
 3. Run `docker compose up --build`
 4. Access the API at `http://0.0.0.0:8000/api/v1/`
 5. Access the Swagger documentation at `http://0.0.0.0:8000/swagger/`
+6. Access the Redoc documentation at `http://0.0.0:8000/redoc/`
 
 ### Using Python
 1. Clone the repository
