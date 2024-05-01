@@ -15,7 +15,7 @@
     - GetCharacter
     - AddFavoriteCharacter
     - ListFavoriteCharacters
-- Utilized PostgreSQL as database.s://github.com/eld4niz/lotr-rest-api/blob/main/external/questions.md
+- Utilized PostgreSQL as the database for more efficient data storage.
 - Created URLs based on RESTful URL conventions.
 - Swagger Documentation(configured with drf-spectacular).
 - Postman Collection.
