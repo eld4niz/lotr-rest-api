@@ -78,6 +78,9 @@ class GetCharacter(APIView):
             
             return Response(character_data)
         
+        except requests.exceptions.HTTPError as e:
+            return Response({"error": "Character not found"}, status=status.HTTP_404_NOT_FOUND)
+        
         except requests.exceptions.RequestException as e:
             return Response({"error": "Error fetching character data"}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -119,7 +122,12 @@ class AddFavoriteCharacter(APIView):
 
             serializer = CharacterSerializer(data=character_data)
             serializer.is_valid(raise_exception=True)
-            serializer.save()
+            
+            if Character.objects.filter(user=request.user, _id=character_id).exists():
+                return Response({"error": "Character already exists in favorites."}, status=status.HTTP_400_BAD_REQUEST)
+            
+            else:
+                serializer.save()
             
             return Response(
                 {

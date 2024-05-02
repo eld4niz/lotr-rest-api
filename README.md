@@ -15,6 +15,7 @@
     - GetCharacter
     - AddFavoriteCharacter
     - ListFavoriteCharacters
+- Wrote 6 unit test cases for the endpoints.
 - Utilized PostgreSQL as the database for more efficient data storage.
 - Created URLs based on RESTful URL conventions.
 - Swagger Documentation(configured with drf-spectacular).

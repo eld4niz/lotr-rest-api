@@ -11,5 +11,5 @@ urlpatterns = [
     # Character Endpoints
     path("character/<str:character_id>/", GetCharacter.as_view(), name="get-character"),
     path("character/", AddFavoriteCharacter.as_view(), name="favorite-character"),
-    path("list/", ListFavoriteCharacters.as_view(), name="character"),
+    path("list/", ListFavoriteCharacters.as_view(), name="character-list"),
 ]
