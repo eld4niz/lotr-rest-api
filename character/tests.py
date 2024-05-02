@@ -6,7 +6,7 @@ from rest_framework_simplejwt.tokens import AccessToken
 from .models import Character
 
 class AddFavoriteCharacterTest(APITestCase):
-    def setUp(self):
+    def initialize(self):
         self.user = User.objects.create_user(username='test_user', password='test_password')
         
         # Generate a JWT token for the test user
@@ -56,7 +56,7 @@ class AddFavoriteCharacterTest(APITestCase):
 
 
 class ListFavoriteCharactersTest(APITestCase):
-    def setUp(self):
+    def initialize(self):
         self.user = User.objects.create_user(username='test_user', password='test_password')
         
         # Generate a JWT token for the test user
@@ -81,7 +81,7 @@ class ListFavoriteCharactersTest(APITestCase):
 
 
 class GetCharacterFromOneAPITest(APITestCase):
-    def setUp(self):
+    def initialize(self):
         self.user = User.objects.create_user(username='test_user', password='test_password')
         
         # Generate a JWT token for the test user

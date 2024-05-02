@@ -49,7 +49,31 @@ Please keep in mind that this application is not production-ready. This project 
 - ListCharacters - This endpoint is for listing authenticated user's favorite characters - GET - `/api/v1/list/`
 - AddFavoriteCharacter - This endpoint is for adding a character to authenticated user's favorite characters - POST - `/api/v1/character/`
 
-## How to run the project?
+## Tests
+
+My tests include 6 unit test cases for the endpoints:
+- AddFavoriteCharacterTest - 3 test cases
+  - test_add_favorite_character_success
+  - test_add_favorite_character_invalid_id
+  - test_add_favorite_character_already_exists
+
+- ListFavoriteCharactersTest - 1 test cases(excluding initial setup)
+  - test_list_favorite_characters
+
+- GetCharacterTest - 1 test cases(excluding initial setup)
+  - test_get_character_success
+  - test_get_character_not_found
+
+I didn't write tests for JWT Token Authentication, because I'm initializing every test case with a new user and I'm not using the same user for multiple test cases. So, I don't need to authenticate the user for the tests.
+
+You can run the tests using the following command:
+
+```bash
+python manage.py test
+```
+
+
+## Running the Project
 
 There are two ways to run the project:
 - Using Docker
